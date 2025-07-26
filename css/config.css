@@ -8,55 +8,55 @@
 =============== */
 :root {
     /* Used as body background and overlays */
-    --bringer-s-body-bg: #07090D;
+    --bringer-s-body-bg: #ffffff;
 
     /* Used as a background color for header, footer, and mobile navigation */
-    --bringer-s-nav: #070d0ccc;
+    --bringer-s-nav: #d9ff8293;
 
     /* Used as a background color for block containers, sub-menus, and form inputs */
-    --bringer-s-container-bg: #1A1D24;
+    --bringer-s-container-bg: #ecff8d;
 
     /* The same as the previous one but with transparency for frosted glass blocks */
-    --bringer-s-container-frosted: #1a241cee;
+    --bringer-s-container-frosted: #c40000;
 
     /* Used as a color for headings, page titles, button labels, and other bright text accents */
-    --bringer-s-heading: #F5F7FA;
+    --bringer-s-heading: #282829;
 
     /* It is the same as the previous one but with transparency. Used for labels, meta, and some hover effects */
-    --bringer-s-heading-fade: #F5F7FAC0;
+    --bringer-s-heading-fade: #888f6dc0;
 
     /* Used as a color for general content */
-    --bringer-s-text: #e0e4f1;
+    --bringer-s-text: #494949;
 
     /* A background color for accents, like buttons, highlighted blocks, etc. */
-    --bringer-s-accent: #80c532;
+    --bringer-s-accent: #D6FF00;
 
     /* A hovered button background color */
-    --bringer-button-hover-bg: #5abd2cec;
+    --bringer-button-hover-bg: #afd105;
 
     /* Used as a color for text accents */
-    --bringer-s-text-accent: #a5ff5c;
+    --bringer-s-text-accent: #738d15;
 
     /* Used as a text color for accented blocks */
     --bringer-s-accented-text: var(--bringer-s-heading);
 
     /* Used as a primary border-color */
-    --bringer-s-border: #8ed83970;
+    --bringer-s-border: #c9d60aa2;
 
     /* Used as a border color for accented blocks */
-    --bringer-s-border-accent: #5cff7780;
+    --bringer-s-border-accent: #adadadea;
     
     /* A default semi-transparent border color for blocks with a shining effect */
-    --bringer-s-border-mute: #c3ffff7a;
+    --bringer-s-border-mute: #9dc000;
 
     /* A semi-transparent border shining effect color */
     --bringer-s-border-highlight: #F5F7FA40;
 
     /* Used as a color for a backlight effect */
-    --bringer-s-backlight: #54c0ff25;
+    --bringer-s-backlight: #deff4a52;
 
     /* Used as a color for block shadow */
-    --bringer-s-box-shadow: #131e2433;
+    --bringer-s-box-shadow: #20202041;
 
     /* The cursor-followed backlight color. It uses the primary backlight color */
     --bringer-s-cursor-light: var(--bringer-s-backlight);
@@ -74,7 +74,6 @@
     /* Main menu current item text color */
     --bringer-c-menu-active: var(--bringer-s-heading);
 }
-
 /* ==========
    TYPOGRAPHY
 ============= */
