@@ -247,11 +247,22 @@
                 <div class="stg-row stg-valign-middle stg-cta-with-image stg-tp-column-reverse">
                     <div class="stg-col-5" data-unload="fade-left">
                         <div class="bringer-offset-image" data-bg-src="img/cta/contact-section-bg.jpg" data-appear="fade-up" data-threshold="0.25"></div>
-                        <form class="bringer-contact-form" action="/api/send" method="POST">
-                            <input type="text" name="name" placeholder="Your Name" required />
-                            <input type="email" name="email" placeholder="Your Email" required />
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                            <button type="submit">Send Message</button>
+                        <form action="/api/send.js" method="post" class="bringer-contact-form bringer-block" data-fill-error="Please, fill out the contact form." data-appear="fade-right" data-threshold="0.25">
+                            <div class="bringer-form-content">
+                                <!-- Field: Name -->
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <!-- Field: Email -->
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com" required>    
+                                <!-- Field: Message -->
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                <!-- Form Button -->
+                                <button type="submit" value="Send Message">Get a FREE Quote</button>
+                                <div class="bringer-contact-form__response"></div>
+                            </div>
+                            <span class="bringer-form-spinner"></span>
                         </form>
                     </div>
                     <div class="stg-col-6 stg-offset-1" data-unload="fade-right">
