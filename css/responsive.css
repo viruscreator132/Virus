@@ -1310,3 +1310,81 @@
         font-size: 12px;
     }
 }
+
+/* ===========================
+   Scoped Orb (safe — no layout break)
+   Scope: .bringer-hero-block.bringer-hero-type02
+   =========================== */
+
+/* make sure parent allows overflow for visual bleed only here */
+.bringer-hero-block.bringer-hero-type02 {
+  position: relative; /* safe anchor for orb positioning */
+  overflow: visible;  /* allow orb to "bleed" without cutting */
+}
+
+/* target the orb container only inside this hero block */
+.bringer-hero-block.bringer-hero-type02 #orb-container {
+  width: 100%;
+  max-width: 420px;      /* base visual size on small/medium screens */
+  height: auto;
+  transform-origin: center center;
+  transform: scale(1);   /* default scale */
+  flex-shrink: 0;        /* do not let layout shrink it unexpectedly */
+  margin: 0 auto;        /* center if block-level inside parent */
+  overflow: visible !important;
+  z-index: 1;
+  pointer-events: none;  /* so text/buttons stay clickable */
+}
+
+
+/* the immediate wrapper (parallax/media) — only adjust sizing, not layout */
+.bringer-hero-block.bringer-hero-type02 .bringer-parallax-media {
+  overflow: visible !important;
+  min-height: 300px;     /* reserve vertical space for orb */
+}
+
+/* ==== Desktop: enlarge orb visually without pushing layout ==== */
+@media (min-width: 1025px) {
+  .bringer-hero-block.bringer-hero-type02 #orb-container {
+    max-width: 560px;    /* visual diameter / canvas size */
+    transform: scale(1.12); /* enlarge slightly */
+  }
+
+  .bringer-hero-block.bringer-hero-type02 .bringer-parallax-media {
+    min-height: 520px;
+  }
+}
+
+/* ==== Tablet: keep a balanced size (iPad like) ==== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bringer-hero-block.bringer-hero-type02 #orb-container {
+    max-width: 420px;
+    transform: scale(1.0);
+  }
+  .bringer-hero-block.bringer-hero-type02 .bringer-parallax-media {
+    min-height: 420px;
+  }
+
+  /* column order change only inside this hero block if your theme uses stg-m-column-reverse */
+  .bringer-hero-block.bringer-hero-type02 .stg-m-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
+
+/* ==== Mobile: stack under text & keep object fully visible ==== */
+@media (max-width: 767px) {
+  .bringer-hero-block.bringer-hero-type02 #orb-container {
+    max-width: 520px;
+    transform: scale(1);
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+  .bringer-hero-block.bringer-hero-type02 .bringer-parallax-media {
+    min-height: 260px;
+  }
+}
+
+.bringer-hero-block.bringer-hero-type02,
+.bringer-hero-block.bringer-hero-type02 .bringer-parallax-media {
+  overflow: visible !important;
+}
