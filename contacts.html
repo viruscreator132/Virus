@@ -405,3 +405,43 @@
 </body>
 
 </html>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const responseEl = form.querySelector('.bringer-contact-form__response');
+    const spinner = form.querySelector('.bringer-form-spinner');
+
+    // Show spinner (optional)
+    spinner.style.display = 'inline-block';
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        responseEl.textContent = '✅ Your message was sent successfully!';
+        form.reset();
+      } else {
+        responseEl.textContent = '❌ ' + data.error;
+      }
+    } catch (err) {
+      console.error('Fetch error:', err);
+      responseEl.textContent = '❌ Failed to send message.';
+    } finally {
+      spinner.style.display = 'none';
+    }
+  });
+</script>
