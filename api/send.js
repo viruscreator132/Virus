@@ -17,8 +17,8 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,   // e.g., your@gmail.com
-      pass: process.env.EMAIL_PASS    // App Password from Gmail
+      user: process.env.mdnafiul22782@gmail.com,   // e.g., your@gmail.com
+      pass: process.env.zffd wayf vlit hylp    // App Password from Gmail
     }
   });
 
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     // ✅ 1. Send email to YOU (the site owner)
     await transporter.sendMail({
       from: email,
-      to: process.env.EMAIL_USER,
+      to: process.env.mdnafiul22782@gmail.com,
       subject: `New Contact Message from ${name}`,
       text: `
         Name: ${name}
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
 
     // ✅ 2. Auto-reply to the user
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: process.env.mdnafiul22782@gmail.com,
       to: email,
       subject: 'Thanks for contacting us!',
       text: `Hi ${name},\n\nThank you for reaching out! We’ve received your message and will respond shortly.\n\n— Nixate Studio`
@@ -52,3 +52,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Something went wrong while sending your message.' });
   }
 }
+
