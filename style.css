@@ -1,0 +1,100 @@
+/* গুগল ফন্ট ইমপোর্ট */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* লাইট গ্রে ব্যাকগ্রাউন্ড */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #444;
+}
+
+.maintenance-container {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.icon-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* সোশ্যাল মিডিয়া আইকন স্টাইল */
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #d93025; /* লালচে থিম */
+    color: #fff;
+    border-color: #d93025;
+}
+
+/* ইমেইল সেকশন */
+.email-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-section span {
+    font-size: 14px;
+    color: #888;
+}
+
+.email-btn {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 8px 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.email-btn:hover {
+    background-color: #f0f0f0;
+}
